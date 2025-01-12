@@ -1,7 +1,7 @@
 <h1 align="center">Hi 👋, I'm Yan Kruziki</h1>
 <h3 align="center">A brazilian student at the Institute of Technology and Leadership (Inteli)</h3>
 
-- 🔭 I’m currently working on **quantitative analysis**
+- 🔭 I’m currently working on **Quantitative Analysis**
 
 - 🌱 I’m currently learning **Finance Market,Statistics and Math**
 

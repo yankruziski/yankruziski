@@ -28,6 +28,7 @@ Organized a talk with [Mauro Shinzato](https://www.linkedin.com/in/mauro-shinzat
 
 - Completed the **Morgan Stanley** Mentorship Program
 - Member of **Mensa Brazil**
+- **National Shogi Champion** — Under-12 category
 
 ---
 

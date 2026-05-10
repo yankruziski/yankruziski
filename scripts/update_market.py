@@ -12,15 +12,29 @@ except ImportError:
     sys.exit(1)
 
 TICKERS = [
-    ("^BVSP",  "Ibovespa",            "🇧🇷"),
-    ("SPY",    "S&P 500 (SPY)",        "🇺🇸"),
-    ("QQQ",    "Nasdaq 100 (QQQ)",     "🇺🇸"),
-    ("QMOM",   "Quant Momentum (QMOM)","📐"),
-    ("MTUM",   "Momentum Factor (MTUM)","⚡"),
-    ("QUAL",   "Quality Factor (QUAL)","🔬"),
+    ("^BVSP", "Ibovespa",             "🇧🇷"),
+    ("SPY",   "S&P 500 (SPY)",         "🇺🇸"),
+    ("QQQ",   "Nasdaq 100 (QQQ)",      "🇺🇸"),
+    ("QMOM",  "Quant Momentum (QMOM)", "📐"),
+    ("MTUM",  "Momentum Factor (MTUM)","⚡"),
+    ("QUAL",  "Quality Factor (QUAL)", "🔬"),
 ]
 
 ARROW = {"up": "▲", "down": "▼", "flat": "─"}
+
+TODAY = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+
+
+def vix_sentiment(level: float) -> str:
+    if level < 15:
+        return "😌 Calm"
+    if level < 20:
+        return "😐 Normal"
+    if level < 30:
+        return "⚠️ Elevated"
+    if level < 40:
+        return "😱 Fear"
+    return "💀 Panic"
 
 
 def fmt_pct(val: float | None) -> str:
@@ -39,22 +53,36 @@ def fmt_price(val: float | None, ticker: str) -> str:
     return f"${val:,.2f}"
 
 
+def fetch_vix_row() -> str:
+    try:
+        t = yf.Ticker("^VIX")
+        info = t.fast_info
+        level: float | None = getattr(info, "last_price", None)
+        prev: float | None = getattr(info, "previous_close", None)
+        day_pct: float | None = ((level - prev) / prev * 100) if level and prev else None
+        label = vix_sentiment(level) if level else "—"
+        return (
+            f"| 😨 **VIX — Fear Index** "
+            f"| {f'{level:.2f}' if level else '—'} "
+            f"| {fmt_pct(day_pct)} "
+            f"| {label} "
+            f"| {TODAY} |"
+        )
+    except Exception as e:
+        return f"| 😨 **VIX — Fear Index** | — | — | — | error: {e} |"
+
+
 def fetch_row(ticker: str, label: str, flag: str) -> str:
     try:
         t = yf.Ticker(ticker)
         info = t.fast_info
-
         price: float | None = getattr(info, "last_price", None)
         prev_close: float | None = getattr(info, "previous_close", None)
-
         day_pct: float | None = ((price - prev_close) / prev_close * 100) if price and prev_close else None
 
-        # YTD: approximate from 52w low/high range midpoint isn't reliable,
-        # so we pull the first trading day of the year explicitly.
         hist = t.history(period="ytd", auto_adjust=True)
         if not hist.empty and price:
-            ytd_start = hist["Close"].iloc[0]
-            ytd_pct = (price - ytd_start) / ytd_start * 100
+            ytd_pct: float | None = (price - hist["Close"].iloc[0]) / hist["Close"].iloc[0] * 100
         else:
             ytd_pct = None
 
@@ -63,19 +91,25 @@ def fetch_row(ticker: str, label: str, flag: str) -> str:
             f"| {fmt_price(price, ticker)} "
             f"| {fmt_pct(day_pct)} "
             f"| {fmt_pct(ytd_pct)} "
-            f"| {datetime.now(timezone.utc).strftime('%Y-%m-%d')} |"
+            f"| {TODAY} |"
         )
     except Exception as e:
         return f"| {flag} **{label}** | — | — | — | error: {e} |"
 
 
 def build_table() -> str:
-    header = (
-        "| Asset | Price | Day % | YTD % | Updated |\n"
+    # VIX gets a special header row that repurposes the YTD column as "Sentiment"
+    vix_header = (
+        "| Asset | Level | Day % | Sentiment | Updated |\n"
         "|---|---|---|---|---|\n"
     )
+    market_header = (
+        "\n| Asset | Price | Day % | YTD % | Updated |\n"
+        "|---|---|---|---|---|\n"
+    )
+    vix = fetch_vix_row()
     rows = "\n".join(fetch_row(ticker, label, flag) for ticker, label, flag in TICKERS)
-    return header + rows
+    return vix_header + vix + market_header + rows
 
 
 def update_readme(table: str) -> None:

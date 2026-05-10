@@ -12,12 +12,12 @@ except ImportError:
     sys.exit(1)
 
 TICKERS = [
-    ("^BVSP", "Ibovespa",             "🇧🇷"),
-    ("SPY",   "S&P 500 (SPY)",         "🇺🇸"),
-    ("QQQ",   "Nasdaq 100 (QQQ)",      "🇺🇸"),
-    ("QMOM",  "Quant Momentum (QMOM)", "📐"),
-    ("MTUM",  "Momentum Factor (MTUM)","⚡"),
-    ("QUAL",  "Quality Factor (QUAL)", "🔬"),
+    ("^BVSP", "Ibovespa"),
+    ("SPY",   "S&P 500 (SPY)"),
+    ("QQQ",   "Nasdaq 100 (QQQ)"),
+    ("QMOM",  "Quant Momentum (QMOM)"),
+    ("MTUM",  "Momentum Factor (MTUM)"),
+    ("QUAL",  "Quality Factor (QUAL)"),
 ]
 
 ARROW = {"up": "▲", "down": "▼", "flat": "─"}
@@ -27,14 +27,14 @@ TODAY = datetime.now(timezone.utc).strftime("%Y-%m-%d")
 
 def vix_sentiment(level: float) -> str:
     if level < 15:
-        return "😌 Calm"
+        return "Calm"
     if level < 20:
-        return "😐 Normal"
+        return "Normal"
     if level < 30:
-        return "⚠️ Elevated"
+        return "Elevated"
     if level < 40:
-        return "😱 Fear"
-    return "💀 Panic"
+        return "Fear"
+    return "Panic"
 
 
 def fmt_pct(val: float | None) -> str:
@@ -62,17 +62,17 @@ def fetch_vix_row() -> str:
         day_pct: float | None = ((level - prev) / prev * 100) if level and prev else None
         label = vix_sentiment(level) if level else "—"
         return (
-            f"| 😨 **VIX — Fear Index** "
+            f"| **VIX — Fear Index** "
             f"| {f'{level:.2f}' if level else '—'} "
             f"| {fmt_pct(day_pct)} "
             f"| {label} "
             f"| {TODAY} |"
         )
     except Exception as e:
-        return f"| 😨 **VIX — Fear Index** | — | — | — | error: {e} |"
+        return f"| **VIX — Fear Index** | — | — | — | error: {e} |"
 
 
-def fetch_row(ticker: str, label: str, flag: str) -> str:
+def fetch_row(ticker: str, label: str) -> str:
     try:
         t = yf.Ticker(ticker)
         info = t.fast_info
@@ -87,18 +87,17 @@ def fetch_row(ticker: str, label: str, flag: str) -> str:
             ytd_pct = None
 
         return (
-            f"| {flag} **{label}** "
+            f"| **{label}** "
             f"| {fmt_price(price, ticker)} "
             f"| {fmt_pct(day_pct)} "
             f"| {fmt_pct(ytd_pct)} "
             f"| {TODAY} |"
         )
     except Exception as e:
-        return f"| {flag} **{label}** | — | — | — | error: {e} |"
+        return f"| **{label}** | — | — | — | error: {e} |"
 
 
 def build_table() -> str:
-    # VIX gets a special header row that repurposes the YTD column as "Sentiment"
     vix_header = (
         "| Asset | Level | Day % | Sentiment | Updated |\n"
         "|---|---|---|---|---|\n"
@@ -108,7 +107,7 @@ def build_table() -> str:
         "|---|---|---|---|---|\n"
     )
     vix = fetch_vix_row()
-    rows = "\n".join(fetch_row(ticker, label, flag) for ticker, label, flag in TICKERS)
+    rows = "\n".join(fetch_row(ticker, label) for ticker, label in TICKERS)
     return vix_header + vix + market_header + rows
 
 

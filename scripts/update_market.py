@@ -139,113 +139,154 @@ def fetch_asset(ticker: str, label: str, short: str) -> dict:
 
 def build_svg(vix: dict, assets: list[dict]) -> str:
     W   = 880
-    PAD = 20
-    TH  = 50   # title bar
-    CH  = 28   # column header
-    RH  = 38   # data row
-    FH  = 26   # footer
+    PAD = 16
+
+    # Bloomberg-authentic layout heights
+    SB  = 18   # status bar (solid amber, top)
+    TB  = 20   # subtitle bar (dark)
+    CH  = 22   # column header band
+    RH  = 32   # data row
+    IL  = 14   # info line above function bar
+    FK  = 20   # function key bar (solid amber, bottom)
 
     n_rows = 1 + len(assets)
-    H = TH + CH + n_rows * RH + FH
+    H = SB + TB + CH + n_rows * RH + IL + FK
 
-    # Column anchors (x positions)
-    C_TICK   = PAD           # left
-    C_LABEL  = PAD + 48      # left
-    C_PRICE  = 390           # right
-    C_DAY    = 480           # right
-    C_YTD    = 570           # right
-    C_CHART  = 585           # left (chart starts here)
-    C_CHART_W= 145
+    # Bloomberg-inspired palette
+    BP = {
+        "bg":       "#040810",
+        "bar":      "#D87000",
+        "bar_text": "#030608",
+        "amber":    "#E8A000",
+        "amber2":   "#FFA020",
+        "white":    "#D8E8F0",
+        "dim":      "#2A3A4A",
+        "dim2":     "#506070",
+        "up":       "#00C878",
+        "down":     "#FF3C3C",
+        "flat":     "#7A8A9A",
+    }
 
-    def t(x, y, text, anchor="start", size=11, fill=None, bold=False) -> str:
+    # Column x-positions
+    C_TICK  = PAD
+    C_NAME  = PAD + 56
+    C_LAST  = 340
+    C_DAY   = 420
+    C_YTD   = 500
+    C_CHART = 516
+    C_CHART_W = W - C_CHART - PAD
+
+    def t(x, y, text, anchor="start", size=10, fill=None, bold=False) -> str:
         fw = 'font-weight="bold"' if bold else ""
-        fc = fill or P["text"]
+        fc = fill or BP["white"]
         return (
             f'<text x="{x}" y="{y}" text-anchor="{anchor}" '
             f'font-family="{FONT}" font-size="{size}" fill="{fc}" {fw}>{text}</text>'
         )
 
     def hline(y, color=None, dash=False, w=0.5, x1=0, x2=None) -> str:
-        c  = color or P["dim"]
-        da = 'stroke-dasharray="3,3"' if dash else ""
+        c  = color or BP["dim"]
+        da = 'stroke-dasharray="4,4"' if dash else ""
         x2 = x2 or W
         return f'<line x1="{x1}" y1="{y}" x2="{x2}" y2="{y}" stroke="{c}" stroke-width="{w}" {da}/>'
 
     parts: list[str] = [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">',
-        f'<rect width="{W}" height="{H}" fill="{P["bg"]}"/>',
-        # outer border
-        f'<rect x="1" y="1" width="{W-2}" height="{H-2}" fill="none" stroke="{P["accent"]}" stroke-width="1" opacity="0.45"/>',
-
-        # ── title bar ──
-        f'<rect x="0" y="0" width="{W}" height="{TH}" fill="{P["accent"]}" opacity="0.10"/>',
-        hline(TH, P["accent"], w=1),
-        t(PAD, 22, "MARKET TERMINAL", size=15, fill=P["accent"], bold=True),
-        t(PAD, TH - 10, "YAN KRUZISKI  ·  QUANT FINANCE  ·  VP OF INTELI RESEARCH", size=9, fill=P["dim2"]),
-        t(W - PAD, 22, NOW_UTC, anchor="end", size=9, fill=P["dim2"]),
-
-        # ── column headers ──
-        t(C_TICK,                        TH + CH - 8, "TICKER", size=9, fill=P["dim2"], bold=True),
-        t(C_LABEL,                       TH + CH - 8, "ASSET",  size=9, fill=P["dim2"], bold=True),
-        t(C_PRICE,                       TH + CH - 8, "PRICE",  anchor="end", size=9, fill=P["dim2"], bold=True),
-        t(C_DAY,                         TH + CH - 8, "DAY %",  anchor="end", size=9, fill=P["dim2"], bold=True),
-        t(C_YTD,                         TH + CH - 8, "YTD %",  anchor="end", size=9, fill=P["dim2"], bold=True),
-        t(C_CHART + C_CHART_W // 2,      TH + CH - 8, "3M",     anchor="middle", size=9, fill=P["dim2"], bold=True),
-        hline(TH + CH, dash=True, x1=PAD, x2=W - PAD),
+        f'<rect width="{W}" height="{H}" fill="{BP["bg"]}"/>',
+        f'<rect x="0.5" y="0.5" width="{W-1}" height="{H-1}" fill="none" stroke="{BP["amber"]}" stroke-width="0.7" opacity="0.5"/>',
     ]
 
-    # ── VIX row ──
-    vr_y  = TH + CH
-    vr_ty = vr_y + RH // 2 + 5
+    # ── solid amber status bar (Bloomberg session bar) ──
+    parts += [
+        f'<rect x="0" y="0" width="{W}" height="{SB}" fill="{BP["bar"]}"/>',
+        t(PAD, SB - 4, "BLOOMBERG", size=9, fill=BP["bar_text"], bold=True),
+        t(PAD + 72, SB - 4, "QUANT MARKET MONITOR", size=9, fill=BP["bar_text"]),
+        t(W // 2, SB - 4, "EQUITY  &amp;  VOLATILITY  DASHBOARD", anchor="middle", size=9, fill=BP["bar_text"]),
+        t(W - PAD, SB - 4, NOW_UTC, anchor="end", size=9, fill=BP["bar_text"]),
+    ]
+
+    # ── subtitle bar ──
+    sub_y = SB + TB - 5
+    parts += [
+        hline(SB + TB, BP["amber"], w=0.8),
+        t(PAD, sub_y, "YAN KRUZISKI  ·  VP OF INTELI RESEARCH  ·  SÃO PAULO, BR", size=9, fill=BP["dim2"]),
+        t(W - PAD, sub_y, "PAGE 1/1", anchor="end", size=9, fill=BP["dim2"]),
+    ]
+
+    # ── column header band ──
+    chy = SB + TB + CH - 6
+    parts += [
+        f'<rect x="0" y="{SB + TB}" width="{W}" height="{CH}" fill="{BP["amber"]}" opacity="0.14"/>',
+        t(C_TICK,                     chy, "TICKER",      size=9, fill=BP["amber2"], bold=True),
+        t(C_NAME,                     chy, "DESCRIPTION", size=9, fill=BP["amber2"], bold=True),
+        t(C_LAST,                     chy, "LAST",        anchor="end", size=9, fill=BP["amber2"], bold=True),
+        t(C_DAY,                      chy, "%CHG",        anchor="end", size=9, fill=BP["amber2"], bold=True),
+        t(C_YTD,                      chy, "YTD%",        anchor="end", size=9, fill=BP["amber2"], bold=True),
+        t(C_CHART + C_CHART_W // 2,   chy, "3-MONTH",     anchor="middle", size=9, fill=BP["amber2"], bold=True),
+        hline(SB + TB + CH, BP["amber"], w=0.9),
+    ]
+
+    # ── VIX row (amber-tinted highlight) ──
+    vr_y  = SB + TB + CH
+    vr_ty = vr_y + RH // 2 + 4
     dc    = color_pct(vix["day_pct"], invert=True)
 
     parts += [
-        f'<rect x="{PAD}" y="{vr_y+1}" width="{W-2*PAD}" height="{RH-2}" fill="{P["accent"]}" opacity="0.06" rx="2"/>',
-        t(C_TICK,  vr_ty, "^VIX",                  size=10, fill=P["accent"], bold=True),
-        t(C_LABEL, vr_ty, "CBOE Volatility Index", size=11, fill=P["text"], bold=True),
-        t(C_PRICE, vr_ty, f'{vix["price"]:.2f}' if vix["price"] is not None else "—",
-          anchor="end", size=12, fill=P["text"]),
-        t(C_DAY, vr_ty, fmt_pct(vix["day_pct"]), anchor="end", size=12, fill=dc),
-        t(C_YTD, vr_ty, vix["label"],             anchor="end", size=11, fill=dc, bold=True),
+        f'<rect x="0" y="{vr_y}" width="{W}" height="{RH}" fill="{BP["amber"]}" opacity="0.09"/>',
+        t(C_TICK,  vr_ty, "^VIX",                    size=10, fill=BP["amber2"],  bold=True),
+        t(C_NAME,  vr_ty, "CBOE VOLATILITY INDEX",   size=10, fill=BP["amber"],   bold=True),
+        t(C_LAST,  vr_ty, f'{vix["price"]:.2f}' if vix["price"] is not None else "—",
+          anchor="end", size=11, fill=BP["white"], bold=True),
+        t(C_DAY,   vr_ty, fmt_pct(vix["day_pct"]),  anchor="end", size=11, fill=dc, bold=True),
+        t(C_YTD,   vr_ty, vix["label"],              anchor="end", size=10, fill=dc, bold=True),
     ]
     if vix["history"]:
-        parts.append(sparkline(vix["history"], C_CHART, vr_y + 6, C_CHART_W, RH - 12, dc))
-    parts.append(hline(vr_y + RH, P["accent"], w=0.4, x1=PAD, x2=W - PAD))
+        parts.append(sparkline(vix["history"], C_CHART, vr_y + 5, C_CHART_W, RH - 10, dc))
+    parts.append(hline(vr_y + RH, BP["amber"], w=0.5))
 
     # ── asset rows ──
     for i, asset in enumerate(assets):
         ry  = vr_y + RH + i * RH
-        ty  = ry + RH // 2 + 5
+        ty  = ry + RH // 2 + 4
         dc  = color_pct(asset["day_pct"])
         yc  = color_pct(asset["ytd_pct"])
 
         if i % 2 == 0:
             parts.append(
-                f'<rect x="{PAD}" y="{ry+1}" width="{W-2*PAD}" height="{RH-2}" '
-                f'fill="#FFFFFF" opacity="0.015" rx="2"/>'
+                f'<rect x="0" y="{ry}" width="{W}" height="{RH}" fill="#FFFFFF" opacity="0.02"/>'
             )
 
         parts += [
-            t(C_TICK,  ty, f'{asset["short"]:<4}', size=10, fill=P["dim2"], bold=True),
-            t(C_LABEL, ty, asset["label"],          size=11, fill=P["text"]),
-            t(C_PRICE, ty, fmt_price(asset["price"], asset["ticker"]),
-              anchor="end", size=12, fill=P["text"]),
-            t(C_DAY, ty, fmt_pct(asset["day_pct"]), anchor="end", size=12, fill=dc),
-            t(C_YTD, ty, fmt_pct(asset["ytd_pct"]), anchor="end", size=12, fill=yc),
+            t(C_TICK,  ty, asset["short"],                      size=10, fill=BP["amber2"],  bold=True),
+            t(C_NAME,  ty, asset["label"].upper(),              size=10, fill=BP["amber"]),
+            t(C_LAST,  ty, fmt_price(asset["price"], asset["ticker"]),
+              anchor="end", size=11, fill=BP["white"], bold=True),
+            t(C_DAY,   ty, fmt_pct(asset["day_pct"]),          anchor="end", size=11, fill=dc),
+            t(C_YTD,   ty, fmt_pct(asset["ytd_pct"]),          anchor="end", size=11, fill=yc),
         ]
         if asset["history"]:
-            parts.append(sparkline(asset["history"], C_CHART, ry + 6, C_CHART_W, RH - 12, dc))
+            parts.append(sparkline(asset["history"], C_CHART, ry + 5, C_CHART_W, RH - 10, dc))
+        parts.append(hline(ry + RH, BP["dim"], w=0.3, x1=PAD, x2=W - PAD))
 
-    # ── footer ──
-    fy = TH + CH + n_rows * RH
+    # ── info line ──
+    fy = SB + TB + CH + n_rows * RH
     parts += [
-        hline(fy, P["accent"], w=0.5),
-        f'<rect x="0" y="{fy}" width="{W}" height="{FH}" fill="{P["accent"]}" opacity="0.05"/>',
-        t(PAD, fy + 17,
-          "src: Yahoo Finance  ·  updated daily by GitHub Actions  ·  github.com/yankruziski",
-          size=9, fill=P["dim2"]),
-        t(W - PAD, fy + 17, TODAY, anchor="end", size=9, fill=P["dim2"]),
+        hline(fy, BP["amber"], w=0.4),
+        t(PAD, fy + IL - 3,
+          "SRC: YAHOO FINANCE  ·  AUTO-UPDATE 22:00 UTC WEEKDAYS  ·  GITHUB.COM/YANKRUZISKI",
+          size=8, fill=BP["dim2"]),
+        t(W - PAD, fy + IL - 3, TODAY, anchor="end", size=8, fill=BP["dim2"]),
     ]
+
+    # ── function key bar (solid amber, like Bloomberg) ──
+    fk_y = fy + IL
+    fk_items = ["F1=HELP", "F2=MAIN", "F3=SAVE", "F4=BACK", "F5=WKSH", "F6=SRCH", "F8=NEWS", "F9=PGUP", "F10=PGDN"]
+    fk_step  = (W - 2 * PAD) / len(fk_items)
+
+    parts.append(f'<rect x="0" y="{fk_y}" width="{W}" height="{FK}" fill="{BP["bar"]}"/>')
+    for j, item in enumerate(fk_items):
+        fx = int(PAD + j * fk_step + fk_step / 2)
+        parts.append(t(fx, fk_y + FK - 5, item, anchor="middle", size=9, fill=BP["bar_text"], bold=True))
 
     parts.append("</svg>")
     return "\n".join(parts)

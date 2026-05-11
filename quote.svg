@@ -12,8 +12,8 @@
 <text x="864" y="32" text-anchor="end" font-family="Courier New, Courier, monospace" font-size="9" fill="#506070">PAGE 5/5</text>
 <line x1="0" y1="38" x2="880" y2="38" stroke="#E8A000" stroke-width="0.8"/>
 
-<text x="440" y="68" text-anchor="middle" font-family="Courier New, Courier, monospace" font-size="14" fill="#FFA020" font-style="italic">"All models are wrong, but some are useful."</text>
-<text x="440" y="88" text-anchor="middle" font-family="Courier New, Courier, monospace" font-size="10" fill="#D8E8F0">— GEORGE E. P. BOX  ·  STATISTICIAN  ·  1976</text>
+<text x="440" y="68" text-anchor="middle" font-family="Courier New, Courier, monospace" font-size="14" fill="#FFA020" font-style="italic">"We don't override our models. The computer makes the decisions. If you start interfering, you break the magic."</text>
+<text x="440" y="88" text-anchor="middle" font-family="Courier New, Courier, monospace" font-size="10" fill="#D8E8F0">- JIM SIMONS </text>
 
 <line x1="0" y1="96" x2="880" y2="96" stroke="#E8A000" stroke-width="0.4"/>
 <text x="16" y="106" font-family="Courier New, Courier, monospace" font-size="8" fill="#506070">GITHUB.COM/YANKRUZISKI  ·  BUILT WITH PYTHON · YFINANCE · SVG  ·  AUTO-UPDATED WEEKDAYS</text>

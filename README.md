@@ -32,13 +32,6 @@
 
 <div align="center">
 
-<img height="160" src="https://github-readme-stats.vercel.app/api?username=yankruziski&show_icons=true&theme=github_dark&hide_border=false&border_color=E8A000&count_private=true&title_color=FFA020&icon_color=FFA020&text_color=D8E8F0&bg_color=040810"/>
-<img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=yankruziski&layout=compact&theme=github_dark&hide_border=false&border_color=E8A000&title_color=FFA020&text_color=D8E8F0&bg_color=040810"/>
-
-</div>
-
-<div align="center">
-
 <img src="quote.svg" alt="End of Transmission" width="880"/>
 
 </div>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="110" viewBox="0 0 880 110">
+<rect width="880" height="110" fill="#040810"/>
+<rect x="0.5" y="0.5" width="879" height="109" fill="none" stroke="#E8A000" stroke-width="0.7" opacity="0.5"/>
+
+<rect x="0" y="0" width="880" height="18" fill="#D87000"/>
+<text x="16" y="14" font-family="Courier New, Courier, monospace" font-size="9" fill="#030608" font-weight="bold">BLOOMBERG</text>
+<text x="88" y="14" font-family="Courier New, Courier, monospace" font-size="9" fill="#030608">END OF TRANSMISSION</text>
+<text x="440" y="14" text-anchor="middle" font-family="Courier New, Courier, monospace" font-size="9" fill="#030608">QUOTE OF THE SESSION</text>
+<text x="864" y="14" text-anchor="end" font-family="Courier New, Courier, monospace" font-size="9" fill="#030608">EOF &lt;GO&gt;</text>
+
+<text x="16" y="32" font-family="Courier New, Courier, monospace" font-size="9" fill="#506070">SESSION CLOSED  ·  THANK YOU FOR VISITING</text>
+<text x="864" y="32" text-anchor="end" font-family="Courier New, Courier, monospace" font-size="9" fill="#506070">PAGE 5/5</text>
+<line x1="0" y1="38" x2="880" y2="38" stroke="#E8A000" stroke-width="0.8"/>
+
+<text x="440" y="68" text-anchor="middle" font-family="Courier New, Courier, monospace" font-size="14" fill="#FFA020" font-style="italic">"All models are wrong, but some are useful."</text>
+<text x="440" y="88" text-anchor="middle" font-family="Courier New, Courier, monospace" font-size="10" fill="#D8E8F0">— GEORGE E. P. BOX  ·  STATISTICIAN  ·  1976</text>
+
+<line x1="0" y1="96" x2="880" y2="96" stroke="#E8A000" stroke-width="0.4"/>
+<text x="16" y="106" font-family="Courier New, Courier, monospace" font-size="8" fill="#506070">GITHUB.COM/YANKRUZISKI  ·  BUILT WITH PYTHON · YFINANCE · SVG  ·  AUTO-UPDATED WEEKDAYS</text>
+<text x="864" y="106" text-anchor="end" font-family="Courier New, Courier, monospace" font-size="8" fill="#506070">© 2026 · REV 2026.1</text>
+</svg>

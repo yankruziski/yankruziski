@@ -146,11 +146,10 @@ def build_svg(vix: dict, assets: list[dict]) -> str:
     TB  = 20   # subtitle bar (dark)
     CH  = 22   # column header band
     RH  = 32   # data row
-    IL  = 14   # info line above function bar
-    FK  = 20   # function key bar (solid amber, bottom)
+    IL  = 18   # info line (bottom)
 
     n_rows = 1 + len(assets)
-    H = SB + TB + CH + n_rows * RH + IL + FK
+    H = SB + TB + CH + n_rows * RH + IL
 
     # Bloomberg-inspired palette
     BP = {
@@ -272,21 +271,11 @@ def build_svg(vix: dict, assets: list[dict]) -> str:
     fy = SB + TB + CH + n_rows * RH
     parts += [
         hline(fy, BP["amber"], w=0.4),
-        t(PAD, fy + IL - 3,
+        t(PAD, fy + IL - 5,
           "SRC: YAHOO FINANCE  ·  AUTO-UPDATE 22:00 UTC WEEKDAYS  ·  GITHUB.COM/YANKRUZISKI",
           size=8, fill=BP["dim2"]),
-        t(W - PAD, fy + IL - 3, TODAY, anchor="end", size=8, fill=BP["dim2"]),
+        t(W - PAD, fy + IL - 5, TODAY, anchor="end", size=8, fill=BP["dim2"]),
     ]
-
-    # ── function key bar (solid amber, like Bloomberg) ──
-    fk_y = fy + IL
-    fk_items = ["F1=HELP", "F2=MAIN", "F3=SAVE", "F4=BACK", "F5=WKSH", "F6=SRCH", "F8=NEWS", "F9=PGUP", "F10=PGDN"]
-    fk_step  = (W - 2 * PAD) / len(fk_items)
-
-    parts.append(f'<rect x="0" y="{fk_y}" width="{W}" height="{FK}" fill="{BP["bar"]}"/>')
-    for j, item in enumerate(fk_items):
-        fx = int(PAD + j * fk_step + fk_step / 2)
-        parts.append(t(fx, fk_y + FK - 5, item, anchor="middle", size=9, fill=BP["bar_text"], bold=True))
 
     parts.append("</svg>")
     return "\n".join(parts)

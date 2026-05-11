@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="206" viewBox="0 0 880 206">
+<rect width="880" height="206" fill="#040810"/>
+<rect x="0.5" y="0.5" width="879" height="205" fill="none" stroke="#E8A000" stroke-width="0.7" opacity="0.5"/>
+
+<rect x="0" y="0" width="880" height="18" fill="#D87000"/>
+<text x="16" y="14" font-family="Courier New, Courier, monospace" font-size="9" fill="#030608" font-weight="bold">BLOOMBERG</text>
+<text x="88" y="14" font-family="Courier New, Courier, monospace" font-size="9" fill="#030608">TECHNOLOGY STACK</text>
+<text x="440" y="14" text-anchor="middle" font-family="Courier New, Courier, monospace" font-size="9" fill="#030608">$ STACK --LIST  —  LANGUAGES &amp; TOOLING</text>
+<text x="864" y="14" text-anchor="end" font-family="Courier New, Courier, monospace" font-size="9" fill="#030608">CMD: STACK &lt;GO&gt;</text>
+
+<text x="16" y="32" font-family="Courier New, Courier, monospace" font-size="9" fill="#506070">YAN KRUZISKI  ·  VP OF INTELI RESEARCH  ·  SÃO PAULO, BR</text>
+<text x="864" y="32" text-anchor="end" font-family="Courier New, Courier, monospace" font-size="9" fill="#506070">PAGE 4/5</text>
+<line x1="0" y1="38" x2="880" y2="38" stroke="#E8A000" stroke-width="0.8"/>
+
+<rect x="0" y="38" width="880" height="22" fill="#E8A000" opacity="0.14"/>
+<text x="16" y="54" font-family="Courier New, Courier, monospace" font-size="9" fill="#FFA020" font-weight="bold">CATEGORY</text>
+<text x="130" y="54" font-family="Courier New, Courier, monospace" font-size="9" fill="#FFA020" font-weight="bold">LIBRARIES / TOOLS</text>
+<text x="780" y="54" text-anchor="end" font-family="Courier New, Courier, monospace" font-size="9" fill="#FFA020" font-weight="bold">N</text>
+<text x="864" y="54" text-anchor="end" font-family="Courier New, Courier, monospace" font-size="9" fill="#FFA020" font-weight="bold">TIER</text>
+<line x1="0" y1="60" x2="880" y2="60" stroke="#E8A000" stroke-width="0.9"/>
+
+<rect x="0" y="60" width="880" height="32" fill="#E8A000" opacity="0.09"/>
+<text x="16" y="80" font-family="Courier New, Courier, monospace" font-size="10" fill="#FFA020" font-weight="bold">PY · QUANT</text>
+<text x="130" y="80" font-family="Courier New, Courier, monospace" font-size="10" fill="#D8E8F0">NUMPY · SCIPY · PANDAS · STATSMODELS · SCIKIT-LEARN</text>
+<text x="780" y="80" text-anchor="end" font-family="Courier New, Courier, monospace" font-size="11" fill="#D8E8F0" font-weight="bold">5</text>
+<text x="864" y="80" text-anchor="end" font-family="Courier New, Courier, monospace" font-size="11" fill="#00C878" font-weight="bold">PRIMARY</text>
+<line x1="0" y1="92" x2="880" y2="92" stroke="#E8A000" stroke-width="0.5"/>
+
+<text x="16" y="112" font-family="Courier New, Courier, monospace" font-size="10" fill="#FFA020" font-weight="bold">PY · VIS</text>
+<text x="130" y="112" font-family="Courier New, Courier, monospace" font-size="10" fill="#D8E8F0">MATPLOTLIB · SEABORN · PLOTLY</text>
+<text x="780" y="112" text-anchor="end" font-family="Courier New, Courier, monospace" font-size="11" fill="#D8E8F0" font-weight="bold">3</text>
+<text x="864" y="112" text-anchor="end" font-family="Courier New, Courier, monospace" font-size="11" fill="#00C878" font-weight="bold">ACTIVE</text>
+<line x1="16" y1="124" x2="864" y2="124" stroke="#2A3A4A" stroke-width="0.3"/>
+
+<rect x="0" y="124" width="880" height="32" fill="#FFFFFF" opacity="0.02"/>
+<text x="16" y="144" font-family="Courier New, Courier, monospace" font-size="10" fill="#FFA020" font-weight="bold">PY · QUANTUM</text>
+<text x="130" y="144" font-family="Courier New, Courier, monospace" font-size="10" fill="#D8E8F0">QISKIT</text>
+<text x="780" y="144" text-anchor="end" font-family="Courier New, Courier, monospace" font-size="11" fill="#D8E8F0" font-weight="bold">1</text>
+<text x="864" y="144" text-anchor="end" font-family="Courier New, Courier, monospace" font-size="11" fill="#FFA020" font-weight="bold">RESEARCH</text>
+<line x1="16" y1="156" x2="864" y2="156" stroke="#2A3A4A" stroke-width="0.3"/>
+
+<text x="16" y="176" font-family="Courier New, Courier, monospace" font-size="10" fill="#FFA020" font-weight="bold">TOOLS</text>
+<text x="130" y="176" font-family="Courier New, Courier, monospace" font-size="10" fill="#D8E8F0">JUPYTER · ARDUINO · HTML5 · CSS3</text>
+<text x="780" y="176" text-anchor="end" font-family="Courier New, Courier, monospace" font-size="11" fill="#D8E8F0" font-weight="bold">4</text>
+<text x="864" y="176" text-anchor="end" font-family="Courier New, Courier, monospace" font-size="11" fill="#00C878" font-weight="bold">ACTIVE</text>
+<line x1="16" y1="188" x2="864" y2="188" stroke="#2A3A4A" stroke-width="0.3"/>
+
+<line x1="0" y1="188" x2="880" y2="188" stroke="#E8A000" stroke-width="0.4"/>
+<text x="16" y="201" font-family="Courier New, Courier, monospace" font-size="8" fill="#506070">PRIMARY LANGUAGE: PYTHON  ·  FOCUS: NUMERICAL COMPUTING, STATISTICS, QUANTUM ALGORITHMS</text>
+<text x="864" y="201" text-anchor="end" font-family="Courier New, Courier, monospace" font-size="8" fill="#506070">REV 2026.1</text>
+</svg>

@@ -1,35 +1,20 @@
 <div align="center">
 
-```
-╔══════════════════════════════════════════════════════════╗
-║  YAN DIMITRI KRUZISKI                                    ║
-║  ──────────────────────────────────────────────────────  ║
-║  QUANT FINANCE  ·  BUSINESS & TECHNOLOGY  ·  MENSA       ║
-║  VP OF INTELI RESEARCH  ·  SÃO PAULO, BR                 ║
-╚══════════════════════════════════════════════════════════╝
-```
+<img src="header.svg" alt="Yan Dimitri Kruziski — Personal Terminal" width="880"/>
 
-[![LinkedIn](https://img.shields.io/badge/LINKEDIN-%23060B14?style=flat-square&logo=linkedin&logoColor=%23E87800)](https://linkedin.com/in/yan-dimitri-kruziski)
-[![Email](https://img.shields.io/badge/EMAIL-%23060B14?style=flat-square&logo=gmail&logoColor=%23E87800)](mailto:ydkruziski@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/LINKEDIN-%23040810?style=flat-square&logo=linkedin&logoColor=%23FFA020)](https://linkedin.com/in/yan-dimitri-kruziski)
+[![Email](https://img.shields.io/badge/EMAIL-%23040810?style=flat-square&logo=gmail&logoColor=%23FFA020)](mailto:ydkruziski@gmail.com)
+[![GitHub](https://img.shields.io/badge/GITHUB-%23040810?style=flat-square&logo=github&logoColor=%23FFA020)](https://github.com/yankruziski)
 
 </div>
 
----
+<!-- BIO_START -->
+<div align="center">
 
-## $ whoami
+<img src="profile.svg" alt="Investor Profile — Biography & Track Record" width="880"/>
 
-Started in financial markets at **15** at [High Trading](https://www.genialinvestimentos.com.br/) — a holding of Genial Investimentos — where I found my passion for **quantitative finance, mathematical models, and data analysis**.
-
-Currently studying **Business & Technology** at [Inteli — Instituto de Tecnologia e Liderança](https://www.inteli.edu.br/) and serving as **VP of Inteli Research**, leading applied research at the intersection of quant finance, ML, and quantum computing.
-
-I'm drawn to the frontier between **Quant Finance** and **Quantum Computing** — where mathematical rigor meets next-generation computing paradigms that will reshape how we model risk, price derivatives, and optimize portfolios.
-
-- Completed the **Morgan Stanley** Mentorship Program
-- Member of **Mensa Brazil**
-- Brazilian Shogi Champion (Meijin-sen U-12)
----
-
-## $ market --live
+</div>
+<!-- BIO_END -->
 
 <!-- MARKET_START -->
 <div align="center">
@@ -39,35 +24,21 @@ I'm drawn to the frontier between **Quant Finance** and **Quantum Computing** �
 </div>
 <!-- MARKET_END -->
 
----
-
-## $ stack --list
-
-```
-PYTHON · DATA & FINANCE ─────────────────────────────────────────
-  numpy  ·  scipy  ·  pandas  ·  statsmodels  ·  scikit-learn
-
-PYTHON · VISUALIZATION ──────────────────────────────────────────
-  matplotlib  ·  seaborn  ·  plotly
-
-PYTHON · QUANTUM COMPUTING ──────────────────────────────────────
-  qiskit
-  
-TOOLS ───────────────────────────────────────────────────────────
-  jupyter  ·  arduino  ·  html5  ·  css3
-```
-
----
-
-## $ stats --github
-
 <div align="center">
-  <img height="155" src="https://github-readme-stats.vercel.app/api?username=yankruziski&show_icons=true&theme=github_dark&hide_border=true&count_private=true&title_color=E87800&icon_color=E87800&text_color=C8D8E8&bg_color=060B14"/>
-  <img height="155" src="https://github-readme-stats.vercel.app/api/top-langs/?username=yankruziski&layout=compact&theme=github_dark&hide_border=true&title_color=E87800&text_color=C8D8E8&bg_color=060B14"/>
+
+<img src="stack.svg" alt="Technology Stack" width="880"/>
+
 </div>
 
----
+<div align="center">
+
+<img height="160" src="https://github-readme-stats.vercel.app/api?username=yankruziski&show_icons=true&theme=github_dark&hide_border=false&border_color=E8A000&count_private=true&title_color=FFA020&icon_color=FFA020&text_color=D8E8F0&bg_color=040810"/>
+<img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=yankruziski&layout=compact&theme=github_dark&hide_border=false&border_color=E8A000&title_color=FFA020&text_color=D8E8F0&bg_color=040810"/>
+
+</div>
 
 <div align="center">
-<sub><code>"All models are wrong, but some are useful." — George Box</code></sub>
+
+<img src="quote.svg" alt="End of Transmission" width="880"/>
+
 </div>

@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="270" viewBox="0 0 880 270">
+<rect width="880" height="270" fill="#040810"/>
+<rect x="0.5" y="0.5" width="879" height="269" fill="none" stroke="#E8A000" stroke-width="0.7" opacity="0.5"/>
+
+<rect x="0" y="0" width="880" height="18" fill="#D87000"/>
+<text x="16" y="14" font-family="Courier New, Courier, monospace" font-size="9" fill="#030608" font-weight="bold">BLOOMBERG</text>
+<text x="88" y="14" font-family="Courier New, Courier, monospace" font-size="9" fill="#030608">INVESTOR PROFILE</text>
+<text x="440" y="14" text-anchor="middle" font-family="Courier New, Courier, monospace" font-size="9" fill="#030608">$ WHOAMI  —  BIOGRAPHY &amp; TRACK RECORD</text>
+<text x="864" y="14" text-anchor="end" font-family="Courier New, Courier, monospace" font-size="9" fill="#030608">CMD: BIO &lt;GO&gt;</text>
+
+<text x="16" y="32" font-family="Courier New, Courier, monospace" font-size="9" fill="#506070">YAN KRUZISKI  ·  VP OF INTELI RESEARCH  ·  SÃO PAULO, BR</text>
+<text x="864" y="32" text-anchor="end" font-family="Courier New, Courier, monospace" font-size="9" fill="#506070">PAGE 2/5</text>
+<line x1="0" y1="38" x2="880" y2="38" stroke="#E8A000" stroke-width="0.8"/>
+
+<rect x="0" y="38" width="880" height="22" fill="#E8A000" opacity="0.14"/>
+<text x="16" y="54" font-family="Courier New, Courier, monospace" font-size="9" fill="#FFA020" font-weight="bold">EVENT</text>
+<text x="130" y="54" font-family="Courier New, Courier, monospace" font-size="9" fill="#FFA020" font-weight="bold">DESCRIPTION</text>
+<text x="864" y="54" text-anchor="end" font-family="Courier New, Courier, monospace" font-size="9" fill="#FFA020" font-weight="bold">STATUS</text>
+<line x1="0" y1="60" x2="880" y2="60" stroke="#E8A000" stroke-width="0.9"/>
+
+<rect x="0" y="60" width="880" height="32" fill="#E8A000" opacity="0.09"/>
+<text x="16" y="80" font-family="Courier New, Courier, monospace" font-size="10" fill="#FFA020" font-weight="bold">ORIGIN</text>
+<text x="130" y="80" font-family="Courier New, Courier, monospace" font-size="10" fill="#D8E8F0">FINANCIAL MARKETS @ HIGH TRADING — GENIAL INVESTIMENTOS HOLDING</text>
+<text x="864" y="80" text-anchor="end" font-family="Courier New, Courier, monospace" font-size="11" fill="#FFA020" font-weight="bold">AGE 15</text>
+<line x1="0" y1="92" x2="880" y2="92" stroke="#E8A000" stroke-width="0.5"/>
+
+<text x="16" y="112" font-family="Courier New, Courier, monospace" font-size="10" fill="#FFA020" font-weight="bold">EDUCATION</text>
+<text x="130" y="112" font-family="Courier New, Courier, monospace" font-size="10" fill="#D8E8F0">BUSINESS &amp; TECHNOLOGY @ INTELI — INSTITUTO DE TECNOLOGIA E LIDERANÇA</text>
+<text x="864" y="112" text-anchor="end" font-family="Courier New, Courier, monospace" font-size="11" fill="#00C878" font-weight="bold">CURRENT</text>
+<line x1="16" y1="124" x2="864" y2="124" stroke="#2A3A4A" stroke-width="0.3"/>
+
+<rect x="0" y="124" width="880" height="32" fill="#FFFFFF" opacity="0.02"/>
+<text x="16" y="144" font-family="Courier New, Courier, monospace" font-size="10" fill="#FFA020" font-weight="bold">ROLE</text>
+<text x="130" y="144" font-family="Courier New, Courier, monospace" font-size="10" fill="#D8E8F0">VP OF INTELI RESEARCH — APPLIED QUANT, ML &amp; QUANTUM COMPUTING</text>
+<text x="864" y="144" text-anchor="end" font-family="Courier New, Courier, monospace" font-size="11" fill="#00C878" font-weight="bold">ACTIVE</text>
+<line x1="16" y1="156" x2="864" y2="156" stroke="#2A3A4A" stroke-width="0.3"/>
+
+<text x="16" y="176" font-family="Courier New, Courier, monospace" font-size="10" fill="#FFA020" font-weight="bold">MENTORSHIP</text>
+<text x="130" y="176" font-family="Courier New, Courier, monospace" font-size="10" fill="#D8E8F0">MORGAN STANLEY MENTORSHIP PROGRAM</text>
+<text x="864" y="176" text-anchor="end" font-family="Courier New, Courier, monospace" font-size="11" fill="#FFA020" font-weight="bold">COMPLETED</text>
+<line x1="16" y1="188" x2="864" y2="188" stroke="#2A3A4A" stroke-width="0.3"/>
+
+<rect x="0" y="188" width="880" height="32" fill="#FFFFFF" opacity="0.02"/>
+<text x="16" y="208" font-family="Courier New, Courier, monospace" font-size="10" fill="#FFA020" font-weight="bold">AFFILIATION</text>
+<text x="130" y="208" font-family="Courier New, Courier, monospace" font-size="10" fill="#D8E8F0">MENSA BRAZIL — HIGH-IQ SOCIETY</text>
+<text x="864" y="208" text-anchor="end" font-family="Courier New, Courier, monospace" font-size="11" fill="#00C878" font-weight="bold">MEMBER</text>
+<line x1="16" y1="220" x2="864" y2="220" stroke="#2A3A4A" stroke-width="0.3"/>
+
+<text x="16" y="240" font-family="Courier New, Courier, monospace" font-size="10" fill="#FFA020" font-weight="bold">SPORT</text>
+<text x="130" y="240" font-family="Courier New, Courier, monospace" font-size="10" fill="#D8E8F0">BRAZILIAN SHOGI CHAMPION — MEIJIN-SEN U-12</text>
+<text x="864" y="240" text-anchor="end" font-family="Courier New, Courier, monospace" font-size="11" fill="#FFA020" font-weight="bold">CHAMPION</text>
+<line x1="16" y1="252" x2="864" y2="252" stroke="#2A3A4A" stroke-width="0.3"/>
+
+<line x1="0" y1="252" x2="880" y2="252" stroke="#E8A000" stroke-width="0.4"/>
+<text x="16" y="265" font-family="Courier New, Courier, monospace" font-size="8" fill="#506070">FRONTIER: QUANT FINANCE × QUANTUM COMPUTING — RISK, DERIVATIVES, PORTFOLIO OPTIMIZATION</text>
+<text x="864" y="265" text-anchor="end" font-family="Courier New, Courier, monospace" font-size="8" fill="#506070">REV 2026.1</text>
+</svg>

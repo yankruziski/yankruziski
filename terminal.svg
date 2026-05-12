@@ -5,7 +5,7 @@
 <text x="16" y="14" text-anchor="start" font-family="Courier New, Courier, monospace" font-size="9" fill="#030608" font-weight="bold">BLOOMBERG</text>
 <text x="88" y="14" text-anchor="start" font-family="Courier New, Courier, monospace" font-size="9" fill="#030608" >QUANT MARKET MONITOR</text>
 <text x="440" y="14" text-anchor="middle" font-family="Courier New, Courier, monospace" font-size="9" fill="#030608" >EQUITY  &amp;  VOLATILITY  DASHBOARD</text>
-<text x="864" y="14" text-anchor="end" font-family="Courier New, Courier, monospace" font-size="9" fill="#030608" >2026-05-11  22:26 UTC</text>
+<text x="864" y="14" text-anchor="end" font-family="Courier New, Courier, monospace" font-size="9" fill="#030608" >2026-05-12  02:44 UTC</text>
 <line x1="0" y1="38" x2="880" y2="38" stroke="#E8A000" stroke-width="0.8" />
 <text x="16" y="33" text-anchor="start" font-family="Courier New, Courier, monospace" font-size="9" fill="#506070" >YAN KRUZISKI  ·  VP OF INTELI RESEARCH  ·  SÃO PAULO, BR</text>
 <text x="864" y="33" text-anchor="end" font-family="Courier New, Courier, monospace" font-size="9" fill="#506070" >PAGE 1/1</text>
@@ -72,5 +72,5 @@
 <line x1="16" y1="284" x2="864" y2="284" stroke="#2A3A4A" stroke-width="0.3" />
 <line x1="0" y1="284" x2="880" y2="284" stroke="#E8A000" stroke-width="0.4" />
 <text x="16" y="297" text-anchor="start" font-family="Courier New, Courier, monospace" font-size="8" fill="#506070" >SRC: YAHOO FINANCE  ·  AUTO-UPDATE 22:00 UTC WEEKDAYS  ·  GITHUB.COM/YANKRUZISKI</text>
-<text x="864" y="297" text-anchor="end" font-family="Courier New, Courier, monospace" font-size="8" fill="#506070" >2026-05-11</text>
+<text x="864" y="297" text-anchor="end" font-family="Courier New, Courier, monospace" font-size="8" fill="#506070" >2026-05-12</text>
 </svg>

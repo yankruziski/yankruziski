@@ -4,6 +4,7 @@
 import re
 import sys
 from datetime import datetime, timezone
+from xml.sax.saxutils import escape
 
 try:
     import yfinance as yf
@@ -180,7 +181,7 @@ def build_svg(vix: dict, assets: list[dict]) -> str:
         fc = fill or BP["white"]
         return (
             f'<text x="{x}" y="{y}" text-anchor="{anchor}" '
-            f'font-family="{FONT}" font-size="{size}" fill="{fc}" {fw}>{text}</text>'
+            f'font-family="{FONT}" font-size="{size}" fill="{fc}" {fw}>{escape(str(text))}</text>'
         )
 
     def hline(y, color=None, dash=False, w=0.5, x1=0, x2=None) -> str:
@@ -200,7 +201,7 @@ def build_svg(vix: dict, assets: list[dict]) -> str:
         f'<rect x="0" y="0" width="{W}" height="{SB}" fill="{BP["bar"]}"/>',
         t(PAD, SB - 4, "BLOOMBERG", size=9, fill=BP["bar_text"], bold=True),
         t(PAD + 72, SB - 4, "QUANT MARKET MONITOR", size=9, fill=BP["bar_text"]),
-        t(W // 2, SB - 4, "EQUITY  &amp;  VOLATILITY  DASHBOARD", anchor="middle", size=9, fill=BP["bar_text"]),
+        t(W // 2, SB - 4, "EQUITY  &  VOLATILITY  DASHBOARD", anchor="middle", size=9, fill=BP["bar_text"]),
         t(W - PAD, SB - 4, NOW_UTC, anchor="end", size=9, fill=BP["bar_text"]),
     ]
 
@@ -322,5 +323,9 @@ if __name__ == "__main__":
     with open("terminal.svg", "w", encoding="utf-8") as f:
         f.write(svg)
     print("terminal.svg written.")
+
+    import xml.dom.minidom
+    xml.dom.minidom.parseString(svg)
+    print("terminal.svg XML validated.")
 
     update_readme()

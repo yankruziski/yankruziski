@@ -5,7 +5,7 @@
 <text x="16" y="14" text-anchor="start" font-family="Courier New, Courier, monospace" font-size="9" fill="#030608" font-weight="bold">BLOOMBERG</text>
 <text x="88" y="14" text-anchor="start" font-family="Courier New, Courier, monospace" font-size="9" fill="#030608" >QUANT MARKET MONITOR</text>
 <text x="440" y="14" text-anchor="middle" font-family="Courier New, Courier, monospace" font-size="9" fill="#030608" >EQUITY  &amp;  VOLATILITY  DASHBOARD</text>
-<text x="864" y="14" text-anchor="end" font-family="Courier New, Courier, monospace" font-size="9" fill="#030608" >2026-11-26  03:57 UTC</text>
+<text x="864" y="14" text-anchor="end" font-family="Courier New, Courier, monospace" font-size="9" fill="#030608" >2026-11-27  03:56 UTC</text>
 <line x1="0" y1="38" x2="880" y2="38" stroke="#E8A000" stroke-width="0.8" />
 <text x="16" y="33" text-anchor="start" font-family="Courier New, Courier, monospace" font-size="9" fill="#506070" >YAN KRUZISKI  ·  VP OF INTELI RESEARCH  ·  SÃO PAULO, BR</text>
 <text x="864" y="33" text-anchor="end" font-family="Courier New, Courier, monospace" font-size="9" fill="#506070" >PAGE 1/1</text>
@@ -20,18 +20,18 @@
 <rect x="0" y="60" width="880" height="32" fill="#E8A000" opacity="0.09"/>
 <text x="16" y="80" text-anchor="start" font-family="Courier New, Courier, monospace" font-size="10" fill="#FFA020" font-weight="bold">^VIX</text>
 <text x="72" y="80" text-anchor="start" font-family="Courier New, Courier, monospace" font-size="10" fill="#E8A000" font-weight="bold">CBOE VOLATILITY INDEX</text>
-<text x="340" y="80" text-anchor="end" font-family="Courier New, Courier, monospace" font-size="11" fill="#D8E8F0" font-weight="bold">28.29</text>
-<text x="420" y="80" text-anchor="end" font-family="Courier New, Courier, monospace" font-size="11" fill="#FF3C3C" font-weight="bold">+7.32%</text>
-<text x="500" y="80" text-anchor="end" font-family="Courier New, Courier, monospace" font-size="10" fill="#FF3C3C" font-weight="bold">ELEVATED</text>
-<polyline points="516.0,85.7 521.3,86.0 526.5,86.7 531.8,86.8 537.1,86.3 542.4,84.8 547.6,86.0 552.9,86.9 558.2,86.7 563.5,85.9 568.7,85.5 574.0,84.7 579.3,83.3 584.5,85.3 589.8,84.1 595.1,84.0 600.4,83.4 605.6,85.8 610.9,86.4 616.2,86.3 621.5,87.0 626.7,86.0 632.0,85.5 637.3,86.3 642.5,85.1 647.8,85.1 653.1,84.8 658.4,84.8 663.6,85.9 668.9,85.7 674.2,86.2 679.5,86.1 684.7,85.8 690.0,86.4 695.3,86.0 700.5,85.9 705.8,84.3 711.1,84.7 716.4,81.1 721.6,82.7 726.9,83.9 732.2,84.5 737.5,82.1 742.7,81.7 748.0,82.8 753.3,83.6 758.5,84.3 763.8,84.0 769.1,81.7 774.4,80.0 779.6,80.3 784.9,84.6 790.2,72.8 795.5,75.4 800.7,81.2 806.0,81.7 811.3,83.7 816.5,82.4 821.8,81.8 827.1,78.2 832.4,75.6 837.6,76.5 842.9,72.6 848.2,65.0 853.5,74.4 858.7,74.7 864.0,72.7" fill="none" stroke="#FF3C3C" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="340" y="80" text-anchor="end" font-family="Courier New, Courier, monospace" font-size="11" fill="#D8E8F0" font-weight="bold">26.80</text>
+<text x="420" y="80" text-anchor="end" font-family="Courier New, Courier, monospace" font-size="11" fill="#00C878" font-weight="bold">-5.37%</text>
+<text x="500" y="80" text-anchor="end" font-family="Courier New, Courier, monospace" font-size="10" fill="#00C878" font-weight="bold">ELEVATED</text>
+<polyline points="516.0,86.0 521.3,86.7 526.5,86.8 531.8,86.3 537.1,84.8 542.4,86.0 547.6,86.9 552.9,86.7 558.2,85.9 563.5,85.5 568.7,84.7 574.0,83.3 579.3,85.3 584.5,84.1 589.8,84.0 595.1,83.4 600.4,85.8 605.6,86.4 610.9,86.3 616.2,87.0 621.5,86.0 626.7,85.5 632.0,86.3 637.3,85.1 642.5,85.1 647.8,84.8 653.1,84.8 658.4,85.9 663.6,85.7 668.9,86.2 674.2,86.1 679.5,85.8 684.7,86.4 690.0,86.0 695.3,85.9 700.5,84.3 705.8,84.7 711.1,81.1 716.4,82.7 721.6,83.9 726.9,84.5 732.2,82.1 737.5,81.7 742.7,82.8 748.0,83.6 753.3,84.3 758.5,84.0 763.8,81.7 769.1,80.0 774.4,80.3 779.6,84.6 784.9,72.8 790.2,75.4 795.5,81.2 800.7,81.7 806.0,83.7 811.3,82.4 816.5,81.8 821.8,78.2 827.1,75.6 832.4,76.5 837.6,72.6 842.9,65.0 848.2,74.4 853.5,74.7 858.7,72.7 864.0,74.2" fill="none" stroke="#00C878" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
 <line x1="0" y1="92" x2="880" y2="92" stroke="#E8A000" stroke-width="0.5" />
 <rect x="0" y="92" width="880" height="32" fill="#FFFFFF" opacity="0.02"/>
 <text x="16" y="112" text-anchor="start" font-family="Courier New, Courier, monospace" font-size="10" fill="#FFA020" font-weight="bold">IBOV</text>
 <text x="72" y="112" text-anchor="start" font-family="Courier New, Courier, monospace" font-size="10" fill="#E8A000" >IBOVESPA</text>
-<text x="340" y="112" text-anchor="end" font-family="Courier New, Courier, monospace" font-size="11" fill="#D8E8F0" font-weight="bold">166,685</text>
-<text x="420" y="112" text-anchor="end" font-family="Courier New, Courier, monospace" font-size="11" fill="#00C878" >+1.21%</text>
-<text x="500" y="112" text-anchor="end" font-family="Courier New, Courier, monospace" font-size="11" fill="#00C878" >+3.83%</text>
-<polyline points="516.0,113.9 521.6,113.9 527.2,113.6 532.8,113.3 538.5,112.5 544.1,111.4 549.7,108.7 555.3,108.7 560.9,108.7 566.5,107.6 572.1,108.5 577.7,107.2 583.4,107.7 589.0,108.5 594.6,108.0 600.2,108.5 605.8,108.3 611.4,108.7 617.0,108.0 622.6,107.6 628.3,108.4 633.9,109.3 639.5,109.5 645.1,109.8 650.7,109.3 656.3,108.1 661.9,107.7 667.5,105.3 673.2,98.1 678.8,98.6 684.4,99.3 690.0,98.4 695.6,97.0 701.2,98.1 706.8,98.3 712.5,99.3 718.1,98.8 723.7,99.0 729.3,97.4 734.9,98.3 740.5,99.4 746.1,98.9 751.7,112.9 757.4,113.3 763.0,115.6 768.6,116.5 774.2,117.1 779.8,118.3 785.4,117.3 791.0,118.0 796.6,116.8 802.3,115.0 807.9,115.5 813.5,115.1 819.1,115.5 824.7,114.9 830.3,116.5 835.9,116.2 841.5,117.3 847.2,117.9 852.8,118.7 858.4,119.0 864.0,117.7" fill="none" stroke="#00C878" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="340" y="112" text-anchor="end" font-family="Courier New, Courier, monospace" font-size="11" fill="#D8E8F0" font-weight="bold">176,800</text>
+<text x="420" y="112" text-anchor="end" font-family="Courier New, Courier, monospace" font-size="11" fill="#00C878" >+6.08%</text>
+<text x="500" y="112" text-anchor="end" font-family="Courier New, Courier, monospace" font-size="11" fill="#00C878" >+10.13%</text>
+<polyline points="516.0,113.9 521.6,113.6 527.2,113.3 532.8,112.5 538.5,111.4 544.1,108.7 549.7,108.7 555.3,108.7 560.9,107.6 566.5,108.5 572.1,107.2 577.7,107.7 583.4,108.5 589.0,108.0 594.6,108.5 600.2,108.3 605.8,108.7 611.4,108.0 617.0,107.6 622.6,108.4 628.3,109.3 633.9,109.5 639.5,109.8 645.1,109.3 650.7,108.1 656.3,107.7 661.9,105.3 667.5,98.1 673.2,98.6 678.8,99.3 684.4,98.4 690.0,97.0 695.6,98.1 701.2,98.3 706.8,99.3 712.5,98.8 718.1,99.0 723.7,97.4 729.3,98.3 734.9,99.4 740.5,98.9 746.1,112.9 751.7,113.3 757.4,115.6 763.0,116.5 768.6,117.1 774.2,118.3 779.8,117.3 785.4,118.0 791.0,116.8 796.6,115.0 802.3,115.5 807.9,115.1 813.5,115.5 819.1,114.9 824.7,116.5 830.3,116.2 835.9,117.3 841.5,117.9 847.2,118.7 852.8,119.0 858.4,117.7 864.0,112.8" fill="none" stroke="#00C878" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
 <line x1="16" y1="124" x2="864" y2="124" stroke="#2A3A4A" stroke-width="0.3" />
 <text x="16" y="144" text-anchor="start" font-family="Courier New, Courier, monospace" font-size="10" fill="#FFA020" font-weight="bold">SPY</text>
 <text x="72" y="144" text-anchor="start" font-family="Courier New, Courier, monospace" font-size="10" fill="#E8A000" >S&amp;P 500</text>
@@ -72,5 +72,5 @@
 <line x1="16" y1="284" x2="864" y2="284" stroke="#2A3A4A" stroke-width="0.3" />
 <line x1="0" y1="284" x2="880" y2="284" stroke="#E8A000" stroke-width="0.4" />
 <text x="16" y="297" text-anchor="start" font-family="Courier New, Courier, monospace" font-size="8" fill="#506070" >SRC: YAHOO FINANCE  ·  AUTO-UPDATE 22:00 UTC WEEKDAYS  ·  GITHUB.COM/YANKRUZISKI</text>
-<text x="864" y="297" text-anchor="end" font-family="Courier New, Courier, monospace" font-size="8" fill="#506070" >2026-11-26</text>
+<text x="864" y="297" text-anchor="end" font-family="Courier New, Courier, monospace" font-size="8" fill="#506070" >2026-11-27</text>
 </svg>
